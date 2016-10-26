@@ -1,0 +1,10 @@
+{
+  "name": "TestApplication",
+  "main": "server.js",
+  "author": "malik_sharif@ymail.com",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^5.7.0"
+  }
+}
