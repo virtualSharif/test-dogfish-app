@@ -21,6 +21,12 @@
                     <div class="form-group">
                         <input type="password" class="form-control input-lg" placeholder="Password" ng-model="password">
                     </div>
+                    <span ng-show="showErrorMessage ">
+                        <div class="alert alert-danger">
+                            <strong>Try Again, </strong>
+                            Username or password is incorrect.
+                        </div>
+                    </span>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary col-md-12 btn-white">
                             <i class="fa fa-sign-in" aria-hidden="true"></i>
