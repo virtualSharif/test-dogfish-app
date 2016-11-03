@@ -5,18 +5,18 @@
         http://test.dogfish.in
 
 # Currently registered users are :
-USER 1:
-  Username : user
-  Password : user
-USER 2:
-  Username : admin
-  Password : admin
-USER 3:
-  Username : dogfish
-  Password : dogfish
-USER 4:
-  Username : sharif
-  Password : sharif
+  USER 1:
+      Username : user
+      Password : user
+  USER 2:
+      Username : admin
+      Password : admin
+  USER 3:
+      Username : dogfish
+      Password : dogfish
+  USER 4:
+      Username : sharif
+      Password : sharif
 
 # Steps : to run the node js application
         npm install
