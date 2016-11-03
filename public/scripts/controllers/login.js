@@ -1,13 +1,11 @@
 'use strict';
 
 angular.module('dogfish-app')
-  .controller('LoginCtrl', function($scope, $location) {
+  .controller('LoginCtrl', function($scope, $state) {
 
     $scope.submit = function() {
-
-      $location.path('/dashboard');
-
-      return false;
+      console.log('login succesful');
+      $state.go('dashboard');
     }
 
   });

@@ -6,35 +6,33 @@
             </div>
             <ul class=snap-ul>
                 <li ng-class="{active: $state.includes('overview')}">
-                    <a ui-sref="overview">Home</a>
-                </li>
-                <li ng-class="{active: $state.includes('reports')}">
-                    <a ui-sref="reports">REPORTS</a>
+                    <a ui-sref=overview>
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        HOME</a>
                 </li>
                 <li>
-                    <a ui-sref="login">LOGOUT</a>
+                    <a ui-sref=login><i class="fa fa-sign-out" aria-hidden="true"></i> LOGOUT</a>
                 </li>
+
             </ul>
         </div>
     </snap-drawer>
     <snap-dragger></snap-dragger>
-    <snap-content snap-opt-tap-to-close="false">
+    <snap-content snap-opt-tap-to-close=false>
         <a snap-toggle=left ng-click="menuOpen = !menuOpen">
-            <span class="menutoggle">
-                <i ng-hide="menuOpen" class="fa fa-bars fa-2x"></i>
-                <i ng-show="menuOpen" class="fa fa-times fa-2x"></i>
+            <span class=menutoggle>
+                <i ng-hide=menuOpen class="fa fa-bars fa-2x"></i>
+                <i ng-show=menuOpen class="fa fa-times fa-2x"></i>
             </span>
         </a>
         <div class=fr>
-            <h2>Dashboard
+            <h2>Home
+                <small>Welcome to DogFish Portal</small>
             </h2>
         </div>
         <div class=jumbotron>
             <div class=container>
-                <h1>List View</h1>
-                <p>
-                    <a ui-sref=login class="btn btn-primary btn-white">Logout</a>
-                </p>
+                <h1>Files are available to download</h1>
             </div>
         </div>
     </snap-content>
