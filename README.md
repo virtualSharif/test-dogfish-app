@@ -2,7 +2,7 @@
 ## Author : Sharif Malik
 
 # Currently deployed on server
-        www.test.dogfish.in
+        http://test.dogfish.in
 
 # Currently registered users are :
 USER 1:
