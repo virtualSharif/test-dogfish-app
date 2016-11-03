@@ -9297,6 +9297,10 @@ table.white tbody {
     padding: .2em 0
 }
 
+.text-white {
+    color: white;
+}
+
 html, body {
     overflow: hidden
 }
