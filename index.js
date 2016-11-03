@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({
 //send UI index file
 app.get('/', function(req, res) {
 // load the single view file (angular will handle the page changes on the front-end)
-    res.sendFile('./public/index.html'); 
+    res.sendFile('./public/index.html');
 });
 
 //all routes will go here
@@ -28,5 +28,5 @@ app.use('/api', controller);
 // Start the server
 app.listen(8000, function () {
 	console.log('Application is running at http://localhost:8000');
-	
+
 });

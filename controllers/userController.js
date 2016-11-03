@@ -5,7 +5,7 @@ var userBusinessService = require('../business/userBusinessService');
 
 router.post('/authenticate', function(req, res) {
     console.log("Authenticating User");
-    res.send(userBusinessService.authenticate(req, res));
+    return userBusinessService.authenticate(req, res);
 });
 
 module.exports = router;

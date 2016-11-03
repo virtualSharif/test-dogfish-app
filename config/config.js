@@ -1,3 +1,4 @@
 module.exports = {
-	secret: 'letsMakeThisSecret'
+	secret: 'letsMakeThisSecret',
+	uploadDir: 'uploads/' 
 };

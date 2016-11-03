@@ -25,9 +25,9 @@ module.exports.authenticate = function(req, res) {
     } else if (user) {
         // check if password matches
         if (user.password != req.body.password) {
-            res.json({
+            res.status(401).json({
                 success: false,
-                message: 'Authentication failed. Wrong password.'
+                message: 'Authentication failed. Username or password is wrong.'
             });
         } else {
             // if user is found and password is right
@@ -35,7 +35,7 @@ module.exports.authenticate = function(req, res) {
             var token = jwt.sign(user, config.secret, {
                 expiresIn: 86400 // expires in 24 hours
             });
-            res.json({
+            res.status(200).json({
                 success: true,
                 message: 'Enjoy your token!',
                 token: token
