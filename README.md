@@ -5,16 +5,16 @@
         http://test.dogfish.in
 
 # Currently registered users are :
-  USER 1:
+##USER 1:
       Username : user
       Password : user
-  USER 2:
+##USER 2:
       Username : admin
       Password : admin
-  USER 3:
+##USER 3:
       Username : dogfish
       Password : dogfish
-  USER 4:
+##USER 4:
       Username : sharif
       Password : sharif
 
