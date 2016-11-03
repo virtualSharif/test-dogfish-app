@@ -17,9 +17,9 @@ angular.module('dogfish-app')
             AuthenticateService.authenticate(compileData()).$promise.then(function(data) {
                 $scope.showErrorMessage = !data.success;
                 if (data.success) {
-                    console.log(data);
+                    // store the token in session
                     sessionStorage.setItem('auth_token', data.token);
-                    localStorage.setItem('auth_token', data.token);
+                    //change the state
                     $state.go('dashboard');
                 }
             });
