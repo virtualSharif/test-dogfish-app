@@ -41,7 +41,7 @@ angular.module('dogfish-app', [
         'ui.router',
         'snap',
         'ngAnimate',
-        'dogfishApp.services'
+        'dogfish-app.services'
     ])
     .config(function($stateProvider, $urlRouterProvider) {
 
@@ -52,3 +52,4 @@ angular.module('dogfish-app', [
             $stateProvider.state(state.name, state.state);
         });
     });
+angular.module('dogfish-app.services', ['ngResource']);

@@ -5,14 +5,18 @@ angular.module('dogfish-app')
 
         var compileData = function() {
             var data = {
-                username: $scope.username;
-                password: $scope.password;
+                username: $scope.username,
+                password: $scope.password
             };
             return data;
         };
+
         $scope.submit = function() {
             AuthenticateService.authenticate(compileData()).$promise.then(function(data){
-              console.log(data);
+              $scope.success = data.success;
+              if(data.success){
+                $state.go('dashboard');
+              }
             });
         }
 

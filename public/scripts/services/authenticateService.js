@@ -5,7 +5,7 @@ angular.module('dogfish-app.services')
         return {
             'authenticate': function (data) {
                 var ret, restResource;
-                restResource = $resource('/authenticate', {}, {
+                restResource = $resource('/api/authenticate', {}, {
                     'authenticate': {
                         'method': 'POST',
                         'isArray': false
