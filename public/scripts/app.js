@@ -13,7 +13,8 @@ var states = [{
         url: '/login',
         parent: 'base',
         templateUrl: 'views/login.html',
-        controller: 'LoginCtrl'
+        controller: 'LoginCtrl',
+        authenticate: false
     }
 }, {
     name: 'dashboard',
@@ -21,14 +22,17 @@ var states = [{
         url: '/dashboard',
         parent: 'base',
         templateUrl: 'views/dashboard.html',
-        controller: 'DashboardCtrl'
+        controller: 'DashboardCtrl',
+        authenticate: true
+
     }
 }, {
     name: 'overview',
     state: {
         url: '/overview',
         parent: 'dashboard',
-        templateUrl: 'views/dashboard/overview.html'
+        templateUrl: 'views/dashboard/overview.html',
+        authenticate: true
     }
 }, {
     name: 'logout',
@@ -51,5 +55,22 @@ angular.module('dogfish-app', [
         angular.forEach(states, function(state) {
             $stateProvider.state(state.name, state.state);
         });
+    }).run(function($rootScope, $state) {
+
+        //prevent state transition without login
+        $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+            console.log('toState.authenticate : ' + toState.authenticate);
+            if (toState.authenticate && sessionStorage.getItem('auth_token')) {
+                $state.go(toState);
+            } else {
+                $state.go('login');
+            }
+        });
+
+        $rootScope.logout = function() {
+          //remove Token
+          sessionStorage.removeItem('auth_token');
+          $state.go('login');
+        };
     });
 angular.module('dogfish-app.services', ['ngResource']);

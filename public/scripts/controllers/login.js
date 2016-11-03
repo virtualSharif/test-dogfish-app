@@ -18,6 +18,7 @@ angular.module('dogfish-app')
                 $scope.showErrorMessage = !data.success;
                 if (data.success) {
                     console.log(data);
+                    sessionStorage.setItem('auth_token', data.token);
                     localStorage.setItem('auth_token', data.token);
                     $state.go('dashboard');
                 }
