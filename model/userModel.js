@@ -9,4 +9,8 @@ module.exports.users = [{
 		{
 			username : "user",
 			password : "user"
+		},
+		{
+			username : "dogfish",
+			password : "dogfish"
 		}];
