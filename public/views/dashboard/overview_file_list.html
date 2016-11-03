@@ -1,0 +1,14 @@
+<div class=container>
+    <h2>Files are available to download</h2>
+    <hr/>
+    <div class="row">
+        <div class="col-md-4" ng-repeat="filename in filenames">
+            <div class="alert alert-success">{{filename}}
+                <button type="button" class="btn btn-primary btn-xs pull-right" title="Download" ng-click="download(filename)">
+                    <i class="fa fa-download"></i>
+                    Download
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
