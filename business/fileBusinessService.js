@@ -3,8 +3,6 @@ var fs = require('fs');
 var app = express();
 
 var config = require('../config/config');
-var fileModel = require('../model/fileModel');
-
 
 module.exports.getAllFilesInfo = function(req, res) {
     // read all the files from upload directory
