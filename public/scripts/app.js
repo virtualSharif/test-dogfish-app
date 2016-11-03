@@ -40,7 +40,8 @@ var states = [{
 angular.module('dogfish-app', [
         'ui.router',
         'snap',
-        'ngAnimate'
+        'ngAnimate',
+        'dogfishApp.services'
     ])
     .config(function($stateProvider, $urlRouterProvider) {
 
