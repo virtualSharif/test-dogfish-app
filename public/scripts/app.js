@@ -59,7 +59,6 @@ angular.module('dogfish-app', [
 
         //prevent state transition without login
         $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
-            console.log('toState.authenticate : ' + toState.authenticate);
             if (toState.authenticate && sessionStorage.getItem('auth_token')) {
                 $state.go(toState);
             } else {
